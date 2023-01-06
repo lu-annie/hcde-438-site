@@ -1,8 +1,12 @@
 html,
 body {
-  font-family: sans-serif;
-  background-color: black;
-  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  text-align: center;
 }
 
 .recipe-container {
