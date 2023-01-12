@@ -1,4 +1,3 @@
-# hcde438mp0
-HCDE 438 MP-0
+# hcde-438-site
 
-This is the first Mini Project as part of the HCDE 438 coursework. Read the MP-0 Writeup for details.
+This is where I document my HCDE 438 coursework.
