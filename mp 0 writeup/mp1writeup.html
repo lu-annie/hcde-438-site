@@ -13,6 +13,7 @@ Open link below > Code button > Download ZIP > Open .zip file in files/finder > 
 </p>
 <a href="https://github.com/lu-annie/pomogranate-extension" target="_blank">Click here to access the GitHub link</a>
 </p>
+<img src="pomogranate.gif" alt="POmo gif" class="center">
 </br>
 Development Process:
 </p>
@@ -33,9 +34,14 @@ Development Process:
 <img src="mp1unfinish.png" alt="Unfinished site" class="center">
 <img src="mp1unfinish2.png" alt="Unfinished site" class="center">
 </p>
-Issue Deep-Dive: Description of an issue you ran into, and the steps you took to resolve it
+Issue Deep-Dive:
 </br>
-One issue I encountered at the beginning was not being able to start the timer when I first loaded the extension.
+One issue I encountered at the beginning was a logic error in which I was not able to start the timer when I first loaded the extension. Just the HTML showed up, but none of my CSS or JavaScript worked.
+</p>
+I solved it by looking over other examples of extensions to see how all the JavaScript and CSS files interacted. I realized the HTML file had a line of code at the top:
+"link rel="stylesheet" href="./.....css" which linked the HTML to the CSS file. Furthermore, I added a line of code that had "script" on both sides, which would essentially tell the
+HTML file to execute the specified JavaScript file. This made me understand that the HTML, CSS, and JavaScript files all need to communicate to each other, so I will remember to
+put those lines from now on into my code.
 </p>
 Ideas and Future Work:
 </br>
