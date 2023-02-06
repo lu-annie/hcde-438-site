@@ -3,61 +3,97 @@
 <head>
     <link rel="stylesheet" href="./mp0writeup.css" />
   </head>
-  <h2><MP-2></MP-2> Writeup</h2>
+  <h2><MP-2>MP-2 Writeup</h2>
   Overview and Usage:
 </p>
-Pomogranate is a Pomodoro timer that keeps you focused on your work by showing you pomegranates every time you open a social media site.
+6 sketches were created using the p5.js editor. The sketches ranged from a static picture to an audio and visual program.
+
 </p>
-How to use this extension:
-Open link below > Code button > Download ZIP > Open .zip file in files/finder > Go to Google Chrome and type chrome://extensions > Toggle Developer Mode to be ON > Load unpacked > Select "pomogranate-extension-main" > Click puzzle icon in top right toolbar > You're ready to use Pomogranate!
+Sketch #1: Russian Flag
 </p>
-<a href="https://github.com/lu-annie/pomogranate-extension" target="_blank">Click here to access the GitHub link</a>
+I drew the Russian Flag using rectangles of different colors. I made sure the rectangles were even by dividing the windowWidth and windowHeight into 3rds.
 </p>
-<img src="pomogranate.gif" alt="POmo gif" class="center">
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/rsm8GHugL"></iframe>
+</p>
+Sketch #2: Disco Inferno!
+</p>
+I drew random circles of varying sizes and in varying shades of red/orange. Every time the page gets refreshed, new circles get generated in a new pattern.
+</p>
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/TvrTOCCPP"></iframe>
+</p>
+Sketch #3: Gone Bananas!
+</p>
+This is an infinite loop of speedy banana-shaped objects. I used the example sine wave function (https://p5js.org/examples/math-sine-wave.html) as a base and changed the speed and shapes to create banana-shaped objects.
+</p>
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/zK7OL879n"></iframe>
+</p>
+Sketch #4: Art:)pad
+</p>
+This is an interactive artpad. Press the mouse and drag to draw. Change the color of the pen by clicking the top left button. Use any key on the keyboard to erase.
+</p>
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/hiuq7m-FO"></iframe>
+</p>
+Sketch #5: Don't Touch His Nose
+</p>
+If you move your mouse over Mike Wazowski (Sully's?) nose, a "Bruh" sound effect will play, and the image will change to Ice Age Baby Mike Wazowski.
+</p>
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/u8cEwcSwP"></iframe>
+</p>
+Sketch #6: Playing the Case Closed Main Theme
+</p>
+Click the button to play the main theme to the anime series "Case Closed!" Or click any key to play a note in the song's key.
+</p>
+<iframe class = center style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/lu-annie/full/ZIpOBLbyY"></iframe>
+</p>
+<a href="https://lu-annie.github.io/hcde438mp0/MP%202%20al/p5js.html" target="_blank">Click here to access the gallery</a>
+</p>
 </br>
 Development Process:
 </p>
-1. I created a GitHub folder for my extension with a README file
+Week of Jan 23 - Jan 27
 </p>
-2. I cloned the GitHub folder and opened it in VS Code
+I drafted out sketches 1, 2, 3, and 4
 </p>
-3. Created a manifest.json file for the Chrome extension
+I completed each sketch 1 by 1 until all 4 were completed
 </p>
-4. Created Content.js to block specific websites when accessed
+I cleaned up the sketches and added finishing touches
 </p>
-5. Created popup.js and popup.html to create the Pomogranate extension popup with the timers
+Week of Jan 31 - Feb 5
 </p>
-6. Added favicon and icons of different sizes
+I drafted out sketches 5 and 6
 </p>
-7. Commited changes to GitHub
+Completed sketch 6, then sketch 7
 </p>
-<img src="mp1unfinish.png" alt="Unfinished site" class="center">
-<img src="mp1unfinish2.png" alt="Unfinished site" class="center">
+Created gallery and hosted sketches on gallery
+</p>
+<img src="mp2unfinish.png" alt="Unfinished sine wave" class="center">
 </p>
 Issue Deep-Dive:
 </br>
-One issue I encountered at the beginning was a logic error in which I was not able to start the timer when I first loaded the extension. Just the HTML showed up, but none of my CSS or JavaScript worked.
+One issue I encountered was not being able to host the interactive sketches on my gallery.
 </p>
-I solved it by looking over other examples of extensions to see how all the JavaScript and CSS files interacted. I realized the HTML file had a line of code at the top:
-"link rel="stylesheet" href="./.....css" which linked the HTML to the CSS file. Furthermore, I added a line of code that had "script" on both sides, which would essentially tell the
-HTML file to execute the specified JavaScript file. This made me understand that the HTML, CSS, and JavaScript files all need to communicate to each other, so I will remember to
-put those lines from now on into my code.
+I got it to work at the beginning by running the Liver Server extension. The issue was that I linked my local file as href, so if I clicked the p5 link on my homepage, it'd only take me to a page I could see on my computer (others couldn't access it). I solved it by running the Live Server extension in VS Code, then pushing the changes to GitHub. It took a while, but I knew the interactive sketches were accessible from a proper link when I saw the browser started with [my github username].github.io.
 </p>
 Ideas and Future Work:
 </br>
 <ul>
-  <li>Change fonts of the extension to something beyond a simple Sans Serif</li>
-  <li>Create an animated background to use as the site blocker (i.e. a spinning pomegranate animation?)</li>
-  <li>Release extension to the Chrome store</li>
+  <li>Create more complex static images</li>
+  <li>Create a sketch that moves according to audio (frequency wave?)</li>
+  <li>Change the sound of the keys to be more like a piano (or create a piano with functioning keys)</li>
 </ul>
 Kudos:
 </p>
-https://www.youtube.com/watch?v=dIrXIJ781DQ
+https://i.redd.it/pcmfkxdynoj41.jpg
 </p>
-https://freshman.tech/first-chrome-extension/
+https://i.redd.it/peibne3f05a81.png
 </p>
-https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-size&preval=cover
+https://tenor.com/view/detective-conan-conan-edogawa-case-closed-skateboard-sick-tricks-gif-19040663
 </p>
-https://www.freecodecamp.org/news/css-button-style-hover-color-and-background/
+http://cmuems.com/2018/60212f/resources/embedding-p5js/
 </p>
-https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
+https://github.com/branchwelder/sketches
+</p>
+https://p5js.org/examples/math-sine-wave.html
+</p>
+https://p5js.org/examples/hello-p5-song.html
+</p>
