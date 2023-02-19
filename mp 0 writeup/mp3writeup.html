@@ -6,58 +6,56 @@
   <h2>MP-3 Writeup</h2>
   Overview and Usage:
 </p>
-CTB stands for "Catch the Beat" and is inspired by osu!catch.
+CTB stands for "Catch the Beat" and is a rhythm game where you catch the objects to the rhythm of the music. It is partly inspired by osu!catch. In this game, circles fall and you must move your player left and right to catch the circles to the beat. Miss one and it's game over!
 </p>
-How to use this extension:
-Open link below > Code button > Download ZIP > Open .zip file in files/finder > Go to Google Chrome and type chrome://extensions > Toggle Developer Mode to be ON > Load unpacked > Select "pomogranate-extension-main" > Click puzzle icon in top right toolbar > You're ready to use Pomogranate!
+How to play:
+Click anywhere on the loading screen to start > Use the left and right arrow keys to move the player circle at the bottom > Catch the falling circles to earn points! Enjoy the music!
 </p>
 <a href="https://github.com/lu-annie/pomogranate-extension" target="_blank">Click here to access the GitHub link</a>
 </p>
-<img src="pomogranate.gif" alt="POmo gif" class="center">
+<img src="mp3gif.gif" alt="game gif" class="center">
 </br>
 Development Process:
 </p>
-1. I created a GitHub folder for my extension with a README file
+1. I set up my p5js file with the p5play template
 </p>
-2. I cloned the GitHub folder and opened it in VS Code
+2. I created the player sprite (which moves horizontally)
 </p>
-3. Created a manifest.json file for the Chrome extension
+3. I created the falling circles sprites (which add to the score)
 </p>
-4. Created Content.js to block specific websites when accessed
+4. I added the loading and game over screens
 </p>
-5. Created popup.js and popup.html to create the Pomogranate extension popup with the timers
+5. I called the screens by creating a mousePressed() function
 </p>
-6. Added favicon and icons of different sizes
+6. I added music and adjusted that to play when the game started
 </p>
-7. Commited changes to GitHub
+7. Deployed my game to GitHub
 </p>
-<img src="mp1unfinish.png" alt="Unfinished site" class="center">
-<img src="mp1unfinish2.png" alt="Unfinished site" class="center">
+</br>
+WIP Screenshots
+</p>
+<img src="mp3gamewip.png" alt="First ver" class="center">
+<img src="mp3gamewip2.png" alt="Second ver" class="center">
 </p>
 Issue Deep-Dive:
 </br>
-One issue I encountered at the beginning was a logic error in which I was not able to start the timer when I first loaded the extension. Just the HTML showed up, but none of my CSS or JavaScript worked.
+One issue I encountered was that the score would not update when the circle was collected by the player.
 </p>
-I solved it by looking over other examples of extensions to see how all the JavaScript and CSS files interacted. I realized the HTML file had a line of code at the top:
-"link rel="stylesheet" href="./.....css" which linked the HTML to the CSS file. Furthermore, I added a line of code that had "script" on both sides, which would essentially tell the
-HTML file to execute the specified JavaScript file. This made me understand that the HTML, CSS, and JavaScript files all need to communicate to each other, so I will remember to
-put those lines from now on into my code.
+I originally used circle.remove() to remove the circles if they overlapped the player. I was under the impression the player would've "collected" the circle, but the score stayed at 0.
+I fixed this by removing the circle.remove() line, and replaced it by resetting the y-value and x-value of the circle to generate a new one that falls. Removing the circle would've broken the loop, hence why the score didn't update.
 </p>
 Ideas and Future Work:
 </br>
 <ul>
-  <li>Change fonts of the extension to something beyond a simple Sans Serif</li>
-  <li>Create an animated background to use as the site blocker (i.e. a spinning pomegranate animation?)</li>
-  <li>Release extension to the Chrome store</li>
+  <li>Allow user to choose a song (and have background change according to song)</li>
+  <li>Create Easy, Normal, and Hard modes, as most rhythm games currently have</li>
+  <li>Change the pattern for notes to match closely to the beat (the notes fall at a constant pace in this game)</li>
+  <li>Allow user to pause the game and resume at a click of a button</li>
 </ul>
 Kudos:
 </p>
-https://www.youtube.com/watch?v=dIrXIJ781DQ
+https://learn.nashvillesoftwareschool.com/blog/2023/02/02/building-a-game-with-p5-part-3-rhythm-game
 </p>
-https://freshman.tech/first-chrome-extension/
+https://editor.p5js.org/ehersh/sketches/Hk52gNXR7
 </p>
-https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-size&preval=cover
-</p>
-https://www.freecodecamp.org/news/css-button-style-hover-color-and-background/
-</p>
-https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
+https://p5play.org/learn/
