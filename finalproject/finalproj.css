@@ -1,0 +1,31 @@
+.picture {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 1;
+  }
+  
+  .bio-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    gap: 12px;
+  }
+  
+  body {
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  h2 {
+    text-align: center;
+  }
