@@ -1,0 +1,63 @@
+<html>
+<title>Final Project Writeup</title>
+<head>
+    <link rel="stylesheet" href="/mp 0 writeup/mp0writeup.css" />
+  </head>
+  <h2>Final Project Writeup</h2>
+  Overview and Usage:
+</p>
+CTB stands for "Catch the Beat" and is a rhythm game where you catch the objects to the rhythm of the music. It is partly inspired by osu!catch. In this game, circles fall and you must move your player left and right to catch the circles to the beat. Miss one and it's game over!
+</p>
+How to play:
+Click anywhere on the loading screen to start > Use the left and right arrow keys to move the player circle at the bottom > Catch the falling circles to earn points! Enjoy the music!
+</p>
+<a href="https://lu-annie.github.io/rhythm-game-ctb/" target="_blank">Click here to access the game</a>
+</p>
+<a href="https://github.com/lu-annie/rhythm-game-ctb" target="_blank">Click here for the repo</a>
+</p>
+<img src="mp3gif.gif" alt="game gif" class="center">
+</br>
+Development Process:
+</p>
+1. I set up my p5js file with the p5play template
+</p>
+2. I created the player sprite (which moves horizontally)
+</p>
+3. I created the falling circles sprites (which add to the score)
+</p>
+4. I added the loading and game over screens
+</p>
+5. I called the screens by creating a mousePressed() function
+</p>
+6. I added music and adjusted that to play when the game started
+</p>
+7. Deployed my game to GitHub
+</p>
+</br>
+WIP Screenshots
+</p>
+<img src="mp3gamewip.png" alt="First ver" class="center">
+<img src="mp3gamewip2.png" alt="Second ver" class="center">
+</p>
+Issue Deep-Dive:
+</br>
+One issue I encountered was that the score would not update when the circle was collected by the player.
+</p>
+I originally used circle.remove() to remove the circles if they overlapped the player. I was under the impression the player would've "collected" the circle, but the score stayed at 0.
+I fixed this by removing the circle.remove() line, and replaced it by resetting the y-value and x-value of the circle to generate a new one that falls. Removing the circle would've broken the loop, hence why the score didn't update.
+</p>
+Ideas and Future Work:
+</br>
+<ul>
+  <li>Allow user to choose a song (and have background change according to song)</li>
+  <li>Create Easy, Normal, and Hard modes, as most rhythm games currently have</li>
+  <li>Change the pattern for notes to match closely to the beat (the notes fall at a constant pace in this game)</li>
+  <li>Allow user to pause the game and resume at a click of a button</li>
+</ul>
+Kudos:
+</p>
+https://learn.nashvillesoftwareschool.com/blog/2023/02/02/building-a-game-with-p5-part-3-rhythm-game
+</p>
+https://editor.p5js.org/ehersh/sketches/Hk52gNXR7
+</p>
+https://p5play.org/learn/
