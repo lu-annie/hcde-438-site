@@ -6,58 +6,75 @@
   <h2>Final Project Prototype Writeup</h2>
   Overview and Usage:
 </p>
-CTB stands for "Catch the Beat" and is a rhythm game where you catch the objects to the rhythm of the music. It is partly inspired by osu!catch. In this game, circles fall and you must move your player left and right to catch the circles to the beat. Miss one and it's game over!
+Block Destructor is a game created using p5.js and p5play. This is a prototype version of a soon-to-be more advanced version with greater user customizability.
+In this game, blocks come in random directions at random speeds (within a range), and a player has to move to the end without hitting the blocks.
+Once they do, they will reach a new level and can keep levelling up until they hit a block.
 </p>
 How to play:
-Click anywhere on the loading screen to start > Use the left and right arrow keys to move the player circle at the bottom > Catch the falling circles to earn points! Enjoy the music!
 </p>
-<a href="https://lu-annie.github.io/rhythm-game-ctb/" target="_blank">Click here to access the game</a>
+1. Click anywhere on the loading screen to start
 </p>
-<a href="https://github.com/lu-annie/rhythm-game-ctb" target="_blank">Click here for the repo</a>
+2. Use the left, right, and up arrow keys to move the player
 </p>
-<img src="mp3gif.gif" alt="game gif" class="center">
+3. Try to reach the top of the screen
+</p>
+4. Avoid the blocks - hit them and you lose
+</p>
+5. Try to beat your highest score!
+</p>
+<a href="https://lu-annie.github.io/block-destructor-game/" target="_blank">Click here to access the game</a>
+</p>
+<a href="https://github.com/lu-annie/block-destructor-game" target="_blank">Click here for the repo</a>
+</p>
+<iframe src="https://editor.p5js.org/lu-annie/full/IWzmMRbLy" width=500 height="600" class="center"></iframe>
 </br>
 Development Process:
 </p>
 1. I set up my p5js file with the p5play template
 </p>
-2. I created the player sprite (which moves horizontally)
+2. I created the player sprite
 </p>
-3. I created the falling circles sprites (which add to the score)
+3. I created variables for blocks and added blocks coming from different directions
 </p>
-4. I added the loading and game over screens
+4. I added the instructions and game over screens
 </p>
 5. I called the screens by creating a mousePressed() function
 </p>
-6. I added music and adjusted that to play when the game started
-</p>
-7. Deployed my game to GitHub
+6. Deployed my game to GitHub
 </p>
 </br>
-WIP Screenshots
+WIP Screenshot
 </p>
-<img src="mp3gamewip.png" alt="First ver" class="center">
-<img src="mp3gamewip2.png" alt="Second ver" class="center">
+<img src="fp1progress.png" alt="WIP" class="center">
 </p>
 Issue Deep-Dive:
 </br>
-One issue I encountered was that the score would not update when the circle was collected by the player.
+One issue I encountered was that the file would not run when I was trying to deploy it to GitHub (showed a blank screen)
 </p>
-I originally used circle.remove() to remove the circles if they overlapped the player. I was under the impression the player would've "collected" the circle, but the score stayed at 0.
-I fixed this by removing the circle.remove() line, and replaced it by resetting the y-value and x-value of the circle to generate a new one that falls. Removing the circle would've broken the loop, hence why the score didn't update.
+I fixed this by using "Inspect Element" on the page, and realized there was an error in one of the scripts that I didn't need (p5 sound library), so I removed that. 
+I also added treeshake: false to my rollup configuration.
 </p>
 Ideas and Future Work:
 </br>
 <ul>
-  <li>Allow user to choose a song (and have background change according to song)</li>
-  <li>Create Easy, Normal, and Hard modes, as most rhythm games currently have</li>
-  <li>Change the pattern for notes to match closely to the beat (the notes fall at a constant pace in this game)</li>
-  <li>Allow user to pause the game and resume at a click of a button</li>
+  <li>User can customize player</li>
+  <li>Make blocks move faster as player levels up</li>
+  <li>Add more blocks as player levels up</li>
+  <li>Pause and restart buttons</li>
+  <li>Allow user to change styling</li>
 </ul>
-Kudos:
 </p>
-https://learn.nashvillesoftwareschool.com/blog/2023/02/02/building-a-game-with-p5-part-3-rhythm-game
+Project scope: How has your project scope changed now that you have completed your prototype? What features have been added/removed to/from your anticipated final project?
 </p>
-https://editor.p5js.org/ehersh/sketches/Hk52gNXR7
+I want to keep the game at a static screen, but just add levels that increase in difficulty instead, because I wasn't sure how to get the player sprite to start inching toward the bottom
+as time passed, and I wasn't sure how to extend my screen as the player moved up. I like this idea better though, as I have the ability to add more components.
 </p>
-https://p5play.org/learn/
+Time management: How did the amount of time you spent building your prototype compare to your initial plan? Were there any unanticipated roadblocks or setbacks?
+</p>
+The prototype took longer than anticipated and I still need to connect Firebase to a scoreboard as I intended in my project, which I will refine in my final project.
+</p>
+Implementation plan: How has your implementation plan for your final version changed now that you have completed your prototype? Why has it changed?
+</p>
+I need to spend more time on the Firebase portion and I also want to focus more on styling and customization. I will make style changes to my game first and foremost, and add a leaderboard, along with
+pause and restart buttons so the experience is more game-like.
+</html>
