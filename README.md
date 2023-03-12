@@ -2,4 +2,4 @@
 
 This is the site where I document my HCDE 438 coursework.
 </br>
-[https://lu-annie.github.io/hcde438mp0/](https://lu-annie.github.io/hcde438mp0/)
+[lu-annie.github.io/hcde438mp0/](https://lu-annie.github.io/hcde438mp0/)
