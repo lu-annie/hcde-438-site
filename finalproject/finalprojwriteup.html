@@ -9,18 +9,21 @@
 ArtPad2.0 is an online drawing app where a user can draw using their mouse.
 Users can select a pen color by clicking the color setting
 </p>
-How to play:
-Click anywhere on the loading screen to start > Use the left and right arrow keys to move the player circle at the bottom > Catch the falling circles to earn points! Enjoy the music!
+How to use:
+Click on the color boxes under "Pen Color" and "BG Color" to select colors for the respective choices.
+Adjust brush size using the slider.
+Draw anything by clicking and dragging across the screen. Undo or clear as needed.
+Download your work
 </p>
 <a href="https://lu-annie.github.io/artpad2.0" target="_blank">Click here to access the app</a>
 </p>
 <a href="https://github.com/lu-annie/artpad2.0" target="_blank">Click here for the repo</a>
 </p>
-<img src="mp3gif.gif" alt="game gif" class="center">
+<iframe src="https://editor.p5js.org/lu-annie/full/HCt_AbO9o" width=500 height="600" class="center"></iframe>
 </br>
 Development Process:
 </p>
-1. I set up my p5js file with the p5play template
+1. I set up the
 </p>
 2. I created the player sprite (which moves horizontally)
 </p>
@@ -42,7 +45,7 @@ WIP Screenshots
 </p>
 Issue Deep-Dive:
 </br>
-One issue I encountered was that the score would not update when the circle was collected by the player.
+One issue I encountered was that after deploying my website, the CSS would not show up despite the HTML and JS elements being there.
 </p>
 I originally used circle.remove() to remove the circles if they overlapped the player. I was under the impression the player would've "collected" the circle, but the score stayed at 0.
 I fixed this by removing the circle.remove() line, and replaced it by resetting the y-value and x-value of the circle to generate a new one that falls. Removing the circle would've broken the loop, hence why the score didn't update.
@@ -50,15 +53,14 @@ I fixed this by removing the circle.remove() line, and replaced it by resetting 
 Ideas and Future Work:
 </br>
 <ul>
-  <li>Allow user to choose a song (and have background change according to song)</li>
-  <li>Create Easy, Normal, and Hard modes, as most rhythm games currently have</li>
-  <li>Change the pattern for notes to match closely to the beat (the notes fall at a constant pace in this game)</li>
-  <li>Allow user to pause the game and resume at a click of a button</li>
+  <li>Add redo button (in case user accidentally undos something)</li>
+  <li>Allow user to change opacity/transparency of brush pen</li>
+  <li>Allow user to save work in-app and view (sort of like p5)</li>
+  <li>Allow users to add images/draw with images</li>
+  <li>Add layers option like in art programs</li>
 </ul>
 Kudos:
 </p>
-https://learn.nashvillesoftwareschool.com/blog/2023/02/02/building-a-game-with-p5-part-3-rhythm-game
+https://www.florin-pop.com/blog/2019/04/drawing-app-built-with-p5js/
 </p>
-https://editor.p5js.org/ehersh/sketches/Hk52gNXR7
-</p>
-https://p5play.org/learn/
+https://editor.p5js.org/aferriss/sketches/bhh2UJd_Z
