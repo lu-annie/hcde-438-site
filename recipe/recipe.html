@@ -12,14 +12,72 @@
       <h2>CSS</h2>
       <ul class="ingredient-list">
         <li>Change Font Color on Hover: header:hover{color: #hex code;}</li>
+        <li>Creating Class: class name {insert stuff here (i.e. colour, margin, etc.)}</li>
+        <li>Linking CSS to HTML (remove brackets): [<]link href="styles/style.css" rel="stylesheet"[/>]</li>
       </ul>
       <h2>HTML</h2>
       <ul class="ingredient-list">
         <li>Change Font Color on Hover: header:hover{color: #hex code;}</li>
+        <li>Basic format:
+        </br>
+          [<]!DOCTYPE html[>]
+          <p>
+          [<]html[>]
+          <p>
+          [<]body[>]
+      </p>
+          {insert words here}
+    </p>
+          [<]/body[>]
+          <p>
+          [<]/html[>]
+          </li>
+          <li>Images: [<]img[>] -> src, alt</li>
+          <li>Links: [<]a href="url">link text[<]/a[>]</li>
+          <li>Lists: [<]ul class="list class name"[>] [<]li[>] insert list item [</]li> [<]/ul></li>
       </ul>
       <h2>JavaScript</h2>
       <ul class="ingredient-list">
-        <li>Deploying a site</li>
+        <li>console.log()</li>
+        <li>prompt("Message") will prompt for user input -> null if cancelled</li>
+        <li>Inputs: [<]input type="input type" [<]input/></li>
+        <li>document.getElementById('id')</li>
+      </ul>
+      <h2>Deploying a Site</h2>
+      <ul class="ingredient-list">
+        <li>Create and clone Git repository</li>
+        <li>Run npm init</li>
+        <li>Install modules</li>
+        <li>Create index.html, index.js, and style.css (optional)</li>
+        <li>npm install --save-dev @web/dev-server</li>
+        <li>Under scripts in package.json: "start": "web-dev-server --node-resolve --open --watch"</li>
+        <li>npm run start</li>
+        <li>npm install rollup --save-dev</li>
+        <li>npm install @rollup/plugin-node-resolve --save-dev</li>
+        <li>npm install rollup-plugin-copy --save-dev</li>
+        <li>Create rollup.config.js:
+        import { nodeResolve } from "@rollup/plugin-node-resolve";
+        import copy from "rollup-plugin-copy";
+        
+        module.exports = {
+          input: "index.js",
+          output: {
+            dir: "dist",
+          },
+          plugins: [
+            copy({
+              targets: [{ src: "index.html", dest: "dist" }],
+            }),
+            nodeResolve(),
+          ],
+        };</li>
+        <li>Package.json under scripts: "build": "rollup --config"</li>
+        <li>npm run build</li>
+        <li>Create .gitignore and add node_modules/ and dist/</li>
+        <li>Add, commit, and push changes</li>
+        <li>npm install gh-pages --save-dev</li>
+        <li>Package.json under scripts: "deploy": "npm run build && gh-pages -d dist"</li>
+        <li>npm run deploy</li>
       </ul>
     </div>
   </body>
